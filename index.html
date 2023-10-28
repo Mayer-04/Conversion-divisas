@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/currency.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversión de divisas</title>
     <meta name="author" content="Mayer Andres Chaves Prada" />
@@ -10,9 +10,17 @@
   <body>
     <div id="app">
       <form id="currencies" class="currency-converter">
-        <h2 class="currency-title">Divisas</h2>
-
         <header class="header">
+          <h2 class="currency-title">Conversor Divisas</h2>
+          <svg class="currency-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              fill="#0a146e"
+              d="M17.005 16.003h2v-12h-10v2h8v10Zm0 2v3c0 .552-.45 1-1.007 1H4.012a1.001 1.001 0 0 1-1.007-1l.002-14c0-.552.45-1 1.007-1h2.99v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3Zm-11.998-10l-.002 12h10v-12H5.007Zm1.998 8h4.5a.5.5 0 1 0 0-1h-3a2.5 2.5 0 0 1 0-5h.5v-1h2v1h2v2h-4.5a.5.5 0 0 0 0 1h3a2.5 2.5 0 0 1 0 5h-.5v1h-2v-1h-2v-2Z"
+            />
+          </svg>
+        </header>
+
+        <div class="amount-container">
           <label class="label-amount" for="amount">Cantidad</label>
           <input
             id="amount"
@@ -20,19 +28,19 @@
             type="text"
             placeholder="Ingresa una cantidad"
           />
-        </header>
+        </div>
 
         <main class="currency-selection">
           <section class="currency-container">
-            <label class="label-from" for="from">De:</label>
+            <label class="label" for="select-from">De:</label>
             <div class="currency-select">
               <img
                 class="country-icon"
                 src="https://flagcdn.com/48x36/us.png"
-                alt=""
+                alt="Estados Unidos"
               />
-              <select id="from" class="select-from">
-                <!-- Options -->
+              <select id="select-from" class="select">
+                <!-- <option class="option" value="Hola">USD</option> -->
               </select>
             </div>
           </section>
@@ -51,15 +59,15 @@
           </figure>
 
           <section class="currency-container">
-            <label class="label-to" for="to">A:</label>
+            <label class="label" for="select-to">A:</label>
             <div class="currency-select">
               <img
                 class="country-icon"
                 src="https://flagcdn.com/48x36/co.png"
-                alt=""
+                alt="Colombia"
               />
-              <select id="to" class="select-to">
-                <!-- Options -->
+              <select id="select-to" class="select">
+                <!-- <option class="option" value="Hola">COLDAA</option> -->
               </select>
             </div>
           </section>
@@ -67,7 +75,7 @@
 
         <footer class="footer">
           <button class="convert-button" type="submit">Convertir</button>
-          <p class="conversion-result">5000 USD = $20953107.00 COP</p>
+          <!-- <p class="conversion-result">5000 USD = $20953107.00 COP</p> -->
         </footer>
       </form>
     </div>

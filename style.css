@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -13,6 +37,7 @@ html {
 }
 
 body {
+  font-family: "Satoshi-Regular", system-ui, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -45,7 +70,119 @@ h6 {
 }
 
 #app {
+  background-color: #0a146e;
   display: grid;
   place-items: center;
   min-height: 100vh;
+}
+
+.currency-converter {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.currency-title {
+  color: #0a146e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.amount-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label-amount {
+  font-weight: 700;
+  color: #0a146e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.input-amount {
+  border: 1px solid #0a146e;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.currency-selection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 15px;
+}
+
+.currency-container {
+  width: 100%;
+}
+
+.label {
+  color: #0a146e;
+  font-weight: 600;
+}
+
+.switch-currency {
+  position: absolute;
+  top: 23px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.switch-icon {
+  width: 20px;
+}
+
+.currency-select {
+  display: flex;
+  gap: 5px;
+  border: 1px solid #11111360;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.country-icon {
+  width: 20px;
+}
+
+.select {
+  width: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.option {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+.convert-button {
+  width: 100%;
+  cursor: pointer;
+  background-color: #0a146e;
+  color: #fff;
+  border: none;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.conversion-result {
+  color: #0a146e;
+  margin-top: 20px;
 }
