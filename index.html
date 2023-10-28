@@ -9,8 +9,69 @@
   </head>
   <body>
     <div id="app">
-      <h1>Hola mundo</h1>
+      <form id="currencies" class="currency-converter">
+        <h2 class="currency-title">Divisas</h2>
+
+        <header class="header">
+          <label class="label-amount" for="amount">Cantidad</label>
+          <input
+            id="amount"
+            class="input-amount"
+            type="text"
+            placeholder="Ingresa una cantidad"
+          />
+        </header>
+
+        <main class="currency-selection">
+          <div class="currency-container">
+            <label class="label-from" for="from">De:</label>
+            <div class="currency-select">
+              <img
+                class="country-icon"
+                src="https://flagcdn.com/48x36/us.png"
+                alt=""
+              />
+              <select id="from" class="select-from">
+                <!-- Options -->
+              </select>
+            </div>
+          </div>
+
+          <div class="switch-currency">
+            <svg class="switch-icon" width="32" height="32" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="#000000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m3 9l4-4l4 4M7 5v14m14-4l-4 4l-4-4m4 4V5"
+              />
+            </svg>
+          </div>
+
+          <div class="currency-container">
+            <label class="label-to" for="to">A:</label>
+            <div class="currency-select">
+              <img
+                class="country-icon"
+                src="https://flagcdn.com/48x36/co.png"
+                alt=""
+              />
+              <select id="to" class="select-to">
+                <!-- Options -->
+              </select>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer">
+          <button class="convert-button" type="submit">Convertir</button>
+          <p class="conversion-result">5000 USD = $20953107.00 COP</p>
+        </footer>
+      </form>
     </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
