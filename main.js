@@ -28,8 +28,9 @@ convertToArray.map((select, index) => {
       `
     );
   });
-
-  handleSelectChange(select, countries);
+  select.addEventListener("change", () => {
+    handleSelectChange(select, countries);
+  });
 });
 
 currenciesContainer.addEventListener("submit", (event) => {
