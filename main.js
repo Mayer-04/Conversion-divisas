@@ -35,6 +35,7 @@ convertToArray.map((select, index) => {
 
 currenciesContainer.addEventListener("submit", (event) => {
   event.preventDefault();
+
   fetchCurrency(inputAmount, selectFrom, selectTo, conversionResult);
 });
 

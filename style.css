@@ -22,6 +22,12 @@
   font-display: swap;
 }
 
+:root {
+  --color-primary: #0a146e;
+  --white: #ffffff;
+  --color-border: #11111360;
+}
+
 *,
 *::before,
 *::after {
@@ -70,14 +76,14 @@ h6 {
 }
 
 #app {
-  background-color: #0a146e;
+  background-color: var(--color-primary);
   display: grid;
   place-items: center;
   min-height: 100vh;
 }
 
 .currency-converter {
-  background-color: #fff;
+  background-color: var(--white);
   padding: 30px 40px;
   border-radius: 10px;
 }
@@ -89,7 +95,7 @@ h6 {
 }
 
 .currency-title {
-  color: #0a146e;
+  color: var(--color-primary);
   text-align: center;
   margin-bottom: 10px;
 }
@@ -102,13 +108,13 @@ h6 {
 
 .label-amount {
   font-weight: 700;
-  color: #0a146e;
+  color: var(--color-primary);
   text-align: center;
   margin-bottom: 10px;
 }
 
 .input-amount {
-  border: 1px solid #0a146e;
+  border: 1px solid var(--color-primary);
   padding: 5px;
   border-radius: 5px;
   outline: none;
@@ -128,7 +134,7 @@ h6 {
 }
 
 .label {
-  color: #0a146e;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -146,7 +152,7 @@ h6 {
 .currency-select {
   display: flex;
   gap: 5px;
-  border: 1px solid #11111360;
+  border: 1px solid var(--color-border);
   border-radius: 5px;
   padding: 5px;
 }
@@ -175,14 +181,16 @@ h6 {
 .convert-button {
   width: 100%;
   cursor: pointer;
-  background-color: #0a146e;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--white);
   border: none;
   padding: 5px 0;
   border-radius: 5px;
 }
 
 .conversion-result {
-  color: #0a146e;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
   margin-top: 20px;
 }
