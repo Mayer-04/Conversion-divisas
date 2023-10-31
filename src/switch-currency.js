@@ -15,7 +15,6 @@ export function handleSwitchCurrency(selectFrom, selectTo, countries) {
     const selectValue = select.value;
     const imgTag = select.closest(".currency-select").querySelector("img");
     imgTag.src = `https://flagcdn.com/48x36/${countries[selectValue]}.png`;
-
-    conversionResult.textContent = "";
   });
+  conversionResult.textContent = "";
 }
