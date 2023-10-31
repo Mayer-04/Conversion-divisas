@@ -1,3 +1,12 @@
+/**
+ *
+ * @param {HTMLInputElement} inputAmount
+ * @param {HTMLSelectElement} selectFrom
+ * @param {HTMLSelectElement} selectTo
+ * @param {HTMLParagraphElement} conversionResult
+ * @returns
+ */
+
 export async function fetchCurrency(
   inputAmount,
   selectFrom,
@@ -27,7 +36,17 @@ export async function fetchCurrency(
     const exchangeRate = data.conversion_rates[selectTo.value];
     const totalRate = (inputValue * exchangeRate).toFixed(2);
 
-    conversionResult.textContent = `${inputValue} ${selectFrom.value} = $${totalRate} ${selectTo.value}`;
+    const formattedAmount = new Intl.NumberFormat(selectFrom.value, {
+      style: "currency",
+      currency: selectTo.value,
+      currencyDisplay: "narrowSymbol",
+    });
+
+    const formattedTotalRate = formattedAmount.format(totalRate);
+
+    const message = `${inputValue} ${selectFrom.value} = ${formattedTotalRate} ${selectTo.value}`;
+
+    conversionResult.textContent = message;
   } catch (error) {
     console.error(`Error al obtener las divisas: ${error.message}`);
   }
