@@ -83,6 +83,7 @@ h6 {
 }
 
 .currency-converter {
+  max-width: 25rem;
   background-color: var(--white);
   padding: 30px 40px;
   border-radius: 10px;
@@ -126,7 +127,7 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .currency-container {
@@ -146,7 +147,7 @@ h6 {
 }
 
 .switch-icon {
-  width: 20px;
+  width: 1.25rem;
 }
 
 .currency-select {
@@ -158,11 +159,11 @@ h6 {
 }
 
 .country-icon {
-  width: 20px;
+  width: 1.25rem;
 }
 
 .select {
-  width: 100px;
+  width: 6.25rem;
   font-size: 12px;
   font-weight: 700;
   border: none;
