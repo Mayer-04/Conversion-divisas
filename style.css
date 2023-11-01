@@ -84,7 +84,7 @@ h6 {
 }
 
 .currency-converter {
-  max-width: 25rem;
+  max-width: 370px;
   overflow: hidden;
   background-color: var(--white);
   padding: 30px 40px;
