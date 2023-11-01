@@ -26,6 +26,7 @@
   --color-primary: #0a146e;
   --white: #ffffff;
   --color-border: #11111360;
+  --color-hover: #0d1a93;
 }
 
 *,
@@ -84,6 +85,7 @@ h6 {
 
 .currency-converter {
   max-width: 25rem;
+  overflow: hidden;
   background-color: var(--white);
   padding: 30px 40px;
   border-radius: 10px;
@@ -111,6 +113,7 @@ h6 {
   font-weight: 700;
   color: var(--color-primary);
   text-align: center;
+  text-decoration: underline;
   margin-bottom: 10px;
 }
 
@@ -119,6 +122,10 @@ h6 {
   padding: 5px;
   border-radius: 5px;
   outline: none;
+}
+
+.input-amount:focus {
+  outline: 2px solid var(--color-primary);
 }
 
 .currency-selection {
@@ -173,6 +180,8 @@ h6 {
 
 .option {
   text-align: center;
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 .footer {
@@ -181,12 +190,17 @@ h6 {
 
 .convert-button {
   width: 100%;
-  cursor: pointer;
+  font-weight: 600;
   background-color: var(--color-primary);
   color: var(--white);
+  cursor: pointer;
   border: none;
   padding: 5px 0;
   border-radius: 5px;
+}
+
+.convert-button:hover {
+  background-color: var(--color-hover);
 }
 
 .conversion-result {
@@ -194,4 +208,8 @@ h6 {
   font-weight: 700;
   color: var(--color-primary);
   margin-top: 20px;
+}
+
+.hidden {
+  display: none;
 }

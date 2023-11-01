@@ -8,6 +8,7 @@ import { countries } from "./data/countries.js";
 
 export function handleSelectChange(select, countries) {
   const selectValue = select.value;
-  const imgTag = select.closest(".currency-select").querySelector("img");
+  const currencySelect = select.closest(".currency-select");
+  const imgTag = currencySelect.querySelector("img");
   imgTag.src = `https://flagcdn.com/48x36/${countries[selectValue]}.png`;
 }

@@ -1,6 +1,6 @@
 import "./style.css";
 import { countries } from "./src/data/countries.js";
-import { initialCountry } from "./src/utils/initial-country.js";
+import { utilities } from "./src/utils/utilities.js";
 import { handleSelectChange } from "./src/select-change.js";
 import { fetchCurrency } from "./src/fetch-currency.js";
 import { handleSwitchCurrency } from "./src/switch-currency.js";
@@ -18,9 +18,9 @@ const countryKey = Object.keys(countries);
 
 convertToArray.map((select, index) => {
   countryKey.forEach((country) => {
-    const countryFrom = index === 0 && country === initialCountry.unitedStates;
-    const countryTo = index === 1 && country === initialCountry.colombia;
-    const selected = countryFrom || countryTo ? "selected" : "";
+    const countryFrom = index === 0 && country === utilities.unitedStates;
+    const countryTo = index === 1 && country === utilities.colombia;
+    const selected = countryFrom || countryTo ? utilities.select : "";
     select.insertAdjacentHTML(
       "beforeend",
       `
