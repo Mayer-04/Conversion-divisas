@@ -1,5 +1,7 @@
 import { countries } from "./data/countries.js";
 
+const conversionResult = document.querySelector(".conversion-result");
+
 /**
  *
  * @param {HTMLSelectElement} selectFrom
@@ -14,4 +16,6 @@ export function handleSwitchCurrency(selectFrom, selectTo, countries) {
     const imgTag = select.closest(".currency-select").querySelector("img");
     imgTag.src = `https://flagcdn.com/48x36/${countries[selectValue]}.png`;
   });
+
+  conversionResult.classList.add("hidden");
 }

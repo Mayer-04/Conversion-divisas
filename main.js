@@ -16,22 +16,20 @@ const conversionResult = document.querySelector(".conversion-result");
 const convertToArray = Array.from(selectAll);
 const countryKey = Object.keys(countries);
 
-convertToArray.map((select, index) => {
-  countryKey.forEach((country) => {
-    const countryFrom = index === 0 && country === utilities.unitedStates;
-    const countryTo = index === 1 && country === utilities.colombia;
-    const selected = countryFrom || countryTo ? utilities.select : "";
-    select.insertAdjacentHTML(
-      "beforeend",
-      `
-      <option class="option" value="${country}" ${selected}>${country}</option>
-      `
-    );
+function renderSelect() {
+  convertToArray.forEach((select, index) => {
+    countryKey.forEach((country) => {
+      const countryFrom = index === 0 && country === utilities.unitedStates;
+      const countryTo = index === 1 && country === utilities.colombia;
+      const selected = countryFrom || countryTo ? utilities.select : "";
+      const option = `<option class="option" value="${country}" ${selected}>${country}</option>`;
+      select.insertAdjacentHTML("beforeend", option);
+    });
+    select.addEventListener("change", () => {
+      handleSelectChange(select, countries);
+    });
   });
-  select.addEventListener("change", () => {
-    handleSelectChange(select, countries);
-  });
-});
+}
 
 currenciesContainer.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -42,3 +40,5 @@ currenciesContainer.addEventListener("submit", (event) => {
 switchCurrency.addEventListener("click", () => {
   handleSwitchCurrency(selectFrom, selectTo, countries);
 });
+
+renderSelect();
