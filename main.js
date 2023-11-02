@@ -39,6 +39,14 @@ currenciesContainer.addEventListener("submit", (event) => {
 
 switchCurrency.addEventListener("click", () => {
   handleSwitchCurrency(selectFrom, selectTo, countries, conversionResult);
+
+  if (!inputAmount.value) {
+    conversionResult.classList.add("hidden");
+    conversionResult.textContent = "";
+    return;
+  }
+
+  fetchCurrency(inputAmount, selectFrom, selectTo, conversionResult);
 });
 
 renderSelect();

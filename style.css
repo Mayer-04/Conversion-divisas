@@ -84,11 +84,17 @@ h6 {
 }
 
 .currency-converter {
-  max-width: 370px;
+  width: 28.125rem;
   overflow: hidden;
   background-color: var(--white);
   padding: 30px 40px;
   border-radius: 10px;
+}
+
+@media (width < 490px) {
+  .currency-converter {
+    max-width: 370px;
+  }
 }
 
 .header {
@@ -98,6 +104,7 @@ h6 {
 }
 
 .currency-title {
+  font-size: 1.75rem;
   color: var(--color-primary);
   text-align: center;
   margin-bottom: 10px;
@@ -106,10 +113,11 @@ h6 {
 .amount-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .label-amount {
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-primary);
   text-align: center;
@@ -134,7 +142,7 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .currency-container {
@@ -142,23 +150,25 @@ h6 {
 }
 
 .label {
+  font-size: 1.125rem;
   color: var(--color-primary);
   font-weight: 600;
 }
 
 .switch-currency {
   position: absolute;
-  top: 23px;
+  top: 27px;
   transform: rotate(90deg);
   cursor: pointer;
 }
 
 .switch-icon {
-  width: 1.25rem;
+  width: 1.375rem;
 }
 
 .currency-select {
   display: flex;
+  justify-content: center;
   gap: 5px;
   border: 1px solid var(--color-border);
   border-radius: 5px;
@@ -170,8 +180,8 @@ h6 {
 }
 
 .select {
+  font-size: 14px;
   width: 6.25rem;
-  font-size: 12px;
   font-weight: 700;
   border: none;
   outline: none;
@@ -190,6 +200,7 @@ h6 {
 
 .convert-button {
   width: 100%;
+  font-size: 1.125rem;
   font-weight: 600;
   background-color: var(--color-primary);
   color: var(--white);
@@ -207,6 +218,7 @@ h6 {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-primary);
+  text-wrap: balance;
   margin-top: 20px;
 }
 

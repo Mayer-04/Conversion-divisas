@@ -16,11 +16,10 @@ export async function fetchCurrency(
   try {
     const inputValue = inputAmount.value;
     if (!inputValue) {
-      conversionResult.classList.add("hidden");
+      conversionResult.classList.remove("hidden");
+      conversionResult.textContent = "Ingresa una cantidad válida.";
       return;
     }
-
-    inputAmount.value = "";
 
     conversionResult.textContent = "Obteniendo el tipo de cambio...";
 
