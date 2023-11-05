@@ -1,6 +1,7 @@
 import "./style.css";
 import { countries } from "./src/data/countries.js";
-import { utilities } from "./src/utils/utilities.js";
+import { exchangeCountry } from "./src/constants/utilities.js";
+import { selectTag } from "./src/constants/utilities.js";
 import { handleSelectChange } from "./src/select-change.js";
 import { fetchCurrency } from "./src/fetch-currency.js";
 import { handleSwitchCurrency } from "./src/switch-currency.js";
@@ -19,9 +20,10 @@ const countryKey = Object.keys(countries);
 function renderSelect() {
   convertToArray.forEach((select, index) => {
     countryKey.forEach((country) => {
-      const countryFrom = index === 0 && country === utilities.unitedStates;
-      const countryTo = index === 1 && country === utilities.colombia;
-      const selected = countryFrom || countryTo ? utilities.select : "";
+      const countryFrom =
+        index === 0 && country === exchangeCountry.unitedStates;
+      const countryTo = index === 1 && country === exchangeCountry.colombia;
+      const selected = countryFrom || countryTo ? selectTag : "";
       const option = `<option class="option" value="${country}" ${selected}>${country}</option>`;
       select.insertAdjacentHTML("beforeend", option);
     });
