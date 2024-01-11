@@ -1,10 +1,13 @@
 import "./style.css";
-import { countries } from "./src/data/countries.js";
-import { exchangeCountry } from "./src/constants/utilities.js";
-import { selectTag } from "./src/constants/utilities.js";
-import { handleSelectChange } from "./src/select-change.js";
-import { fetchCurrency } from "./src/fetch-currency.js";
-import { handleSwitchCurrency } from "./src/switch-currency.js";
+
+import {
+  countries,
+  exchangeCountry,
+  selectTag,
+  handleSelectChange,
+  fetchCurrency,
+  handleSwitchCurrency,
+} from "./src/index.js";
 
 const currenciesContainer = document.getElementById("currencies");
 const inputAmount = document.getElementById("amount");
