@@ -7,12 +7,12 @@
  * @return {Promise<void>}
  */
 
-export async function fetchCurrency(
+export async function fetchCurrency({
   inputAmount,
   selectFrom,
   selectTo,
-  conversionResult
-) {
+  conversionResult,
+}) {
   try {
     const inputValue = inputAmount.value;
     if (!inputValue) {

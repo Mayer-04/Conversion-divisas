@@ -36,11 +36,11 @@ function renderSelect() {
 currenciesContainer.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  fetchCurrency(inputAmount, selectFrom, selectTo, conversionResult);
+  fetchCurrency({ inputAmount, selectFrom, selectTo, conversionResult });
 });
 
 switchCurrency.addEventListener("click", () => {
-  handleSwitchCurrency(selectFrom, selectTo, countries, conversionResult);
+  handleSwitchCurrency({ selectFrom, selectTo, countries, conversionResult });
 
   if (!inputAmount.value) {
     conversionResult.classList.add("hidden");
@@ -48,7 +48,7 @@ switchCurrency.addEventListener("click", () => {
     return;
   }
 
-  fetchCurrency(inputAmount, selectFrom, selectTo, conversionResult);
+  fetchCurrency({ inputAmount, selectFrom, selectTo, conversionResult });
 });
 
 renderSelect();

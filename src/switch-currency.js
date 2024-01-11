@@ -8,20 +8,24 @@ import { countries } from "./data/countries.js";
  * @param {HTMLParagraphElement} conversionResult
  */
 
-export function handleSwitchCurrency(
+export function handleSwitchCurrency({
   selectFrom,
   selectTo,
   countries,
-  conversionResult
-) {
+  conversionResult,
+}) {
   [selectFrom.value, selectTo.value] = [selectTo.value, selectFrom.value];
-  
-  const selectFromImg = selectFrom.closest(".currency-select").querySelector("img");
+
+  const selectFromImg = selectFrom
+    .closest(".currency-select")
+    .querySelector("img");
   const selectToImg = selectTo.closest(".currency-select").querySelector("img");
-  selectFromImg.src = `https://flagcdn.com/48x36/${countries[selectFrom.value]}.png`;
-  selectToImg.src = `https://flagcdn.com/48x36/${countries[selectTo.value]}.png`;
+  selectFromImg.src = `https://flagcdn.com/48x36/${
+    countries[selectFrom.value]
+  }.png`;
+  selectToImg.src = `https://flagcdn.com/48x36/${
+    countries[selectTo.value]
+  }.png`;
 
   conversionResult.classList.add("hidden");
 }
-
-
